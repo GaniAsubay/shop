@@ -1,6 +1,6 @@
 AddDefaultCharset utf-8
 
-php_value date.timezone «Europe/Kiev»
+php_value date.timezone Â«Asia/AlmatyÂ»
 
 RewriteEngine on
 RewriteBase /
