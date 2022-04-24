@@ -5,7 +5,7 @@ include (ROOT . '/views/parts/header.php');
     <div class="container">
         <!--left sidebar-->
         <div class="sidebar">
-            <h2>Категории</h2>
+            <h2>Санаттар</h2>
             <ul class="left_sidebar">
                 <?php foreach ($categories as $catItem): ?>
                     <li><a href="/category/<?php echo $catItem['id']?>">
@@ -16,13 +16,13 @@ include (ROOT . '/views/parts/header.php');
         </div>
         <!--main content-->
         <div class="content">
-            <h2>Корзина</h2>
+            <h2>Жәшік</h2>
 
             <?php if ($res): ?>
-                <p>Заказ оформлен. Мы Вам перезвоним.</p>
+                <p>Тапсырыс өңделеді. Біз сізге қайта қоңырау шаламыз.</p>
             <?php else: ?>
 
-            <p>Выбрано товаров: <?php echo $totalQuantity; ?>, на сумму: <?php echo $totalPrice; ?> грн</p><br/>
+            <p>Таңдалған өнімдер: <?php echo $totalQuantity; ?>, сомасына: <?php echo $totalPrice; ?> тнг</p><br/>
 
             <?php if (!$res): ?>
 
@@ -34,9 +34,9 @@ include (ROOT . '/views/parts/header.php');
                 </ul>
             <?php endif;?>
             <form action="#" method="post" id="checkout_form">
-                <p>Для оформления заказа заполните форму. Наш менеджер свяжется с Вами.</p>
-                <input required type="text" name="name" placeholder="Введите имя" value="<?php echo $userName;?>">
-                <input required type="tel" name="tel" pattern="0([0-9]{2})([0-9]{7})" placeholder="Телефон в формате: 0(xx)-xxx-xx-xx">
+                <p>Тапсырыс беру үшін пішінді толтырыңыз. Біздің менеджер сізбен байланысады.</p>
+                <input required type="text" name="name" placeholder="Атыңызды енгізіңіз" value="<?php echo $userName;?>">
+                <input required type="tel" name="tel" placeholder="Телефон пішімі: 8(xxx)-xxx-xx-xx">
                 <textarea name="comment" placeholder="Комментарий к заказу"></textarea>
                 <input type=submit name="submit" value="Оформить заказ" id="check_btn">
             </form>

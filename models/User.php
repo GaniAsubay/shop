@@ -9,7 +9,7 @@ class User {
      * Если в контроллере все ОК, принимаем данные и записываем в БД
      *
      * @param $name имя
-     * @param $email email
+     * @parөнім идентификаторыӨнім кодыam $email email
      * @param $password пароль
      * @return bool  возвращает true/false
      */
@@ -125,14 +125,15 @@ class User {
 
         $res = $db->prepare($sql);
 
-        $res->bindParam(':email', $email, PDO::PARAM_INT);
+        $res->bindParam(':email', $email, PDO::PARAM_STR);
 
         $res->execute();
 
         $user = $res->fetch();
-
-        if (password_verify($password, $user['password'])) {
-            return $user['id'];
+        if ($user) {
+            if (password_verify($password, $user['password'])) {
+                return $user['id'];
+            }
         }
 
         return false;

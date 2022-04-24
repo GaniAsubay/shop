@@ -3,16 +3,16 @@ include (ROOT . '/views/parts/header_admin.php');
 ?>
 
 <div class="container_admin">
-    <h4>Добрый день, администратор!</h4>
+    <h4>Қайырлы күн админ!</h4>
 
     <br/>
 
-    <p>Вам доступны такие возможности:</p>
+    <p>Келесі опциялар сізге қолжетімді:</p>
 
     <ul>
-        <li><a target="_blank" href="/admin/product">Управление товарами</a></li>
-        <li><a target="_blank" href="/admin/category">Управление категориями</a></li>
-        <li><a target="_blank" href="/admin/orders">Управление заказами</a></li>
+        <li><a href="/admin/product">Өнімдерді басқару</a></li>
+        <li><a href="/admin/category">Санаттарды басқару</a></li>
+        <li><a href="/admin/orders">Тапсырысты басқару</a></li>
     </ul>
 </div>
 <div class="appendix"></div>

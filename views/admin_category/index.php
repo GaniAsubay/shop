@@ -5,15 +5,15 @@ include (ROOT . '/views/parts/header_admin.php');
 <section>
     <div class="container_admin">
         <a href="/admin/category/add" class="add_cat">
-            Добавить категорию
+            Санат қосу
         </a>
-        <h4 id="admin_list_h4">Список категорий</h4>
+        <h4 id="admin_list_h4">Санаттар тізімі</h4>
         <table id="admin_product_list" cellspacing="0">
             <tr>
-                <th>ID категории</th>
-                <th>Название категории</th>
-                <th>Порядковый номер</th>
-                <th>Статус</th>
+                <th>Санат идентификаторы</th>
+                <th>Категория атауы</th>
+                <th>Реттік нөмір</th>
+                <th>Күй</th>
             </tr>
 
             <?php foreach ($categories as $category):?>

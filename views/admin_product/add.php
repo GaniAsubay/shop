@@ -4,19 +4,19 @@ include (ROOT . '/views/parts/header_admin.php');
 
 <section>
     <div class="container">
-        <h2>Добавить новый товар</h2>
+        <h2>Жаңа элемент қосу</h2>
             <form action="#" method="post" id="add_form" enctype="multipart/form-data">
 
-                <p>Название товара</p>
+                <p>Өнім атауы</p>
                 <input required type="text" name="name">
 
-                <p>Код товара</p>
+                <p>Өнім коды</p>
                 <input required type="text" name="code">
 
-                <p>Стоимость</p>
+                <p>Бағасы</p>
                 <input required type="text" name="price">
 
-                <p>Категория</p>
+                <p>Санат</p>
                 <select name="category">
                     <?php if (is_array($categories)): ?>
                         <?php foreach ($categories as $category): ?>
@@ -27,31 +27,31 @@ include (ROOT . '/views/parts/header_admin.php');
                     <?php endif; ?>
                 </select>
 
-                <p>Производитель</p>
+                <p>Өндіруші</p>
                 <input required type="text" name="brand">
 
-                <p>Изображение товара</p>
+                <p>Өнім суреті</p>
                 <input type="file" name="image">
 
-                <p>Детальное описание</p>
+                <p>Егжей-тегжейлі сипаттама</p>
                 <textarea id="add_description" name="description"></textarea>
 
-                <p>Наличие на складе</p>
+                <p>Қоймада болуы</p>
                 <select name="availability">
-                    <option value="1" selected>Да</option>
-                    <option value="0">Нет</option>
+                    <option value="1" selected>Иә</option>
+                    <option value="0">Жоқ</option>
                 </select>
 
-                <p>Новинка</p>
+                <p>Жаңа</p>
                 <select name="is_new">
-                    <option value="1" selected>Да</option>
-                    <option value="0">Нет</option>
+                    <option value="1" selected>Иә</option>
+                    <option value="0">Жоқ</option>
                 </select>
 
                 <p>Статус</p>
                 <select name="status">
-                    <option value="1" selected>Отображается</option>
-                    <option value="0">Скрыт</option>
+                    <option value="1" selected>Көрсетіледі</option>
+                    <option value="0">Жасырын</option>
                 </select>
                 <input type=submit name="submit" value="Сохранить" id="add_btn">
             </form>

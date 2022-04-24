@@ -25,11 +25,11 @@ include (ROOT . '/views/parts/header_admin.php');
                         <?php echo Order::getStatusText($order['status']);?>
                     </td>
 
-                    <td><a target="_blank" title="Просмотр" href="/admin/orders/view/<?php echo $order['id']?>" class="del">
+                    <td><a title="Просмотр" href="/admin/orders/view/<?php echo $order['id']?>" class="del">
                             <img src="../../template/images/view.png" alt="">
                         </a></td>
 
-                    <td><a target="_blank" title="Редактировать" href="/admin/orders/edit/<?php echo $order['id']?>" class="del">
+                    <td><a title="Редактировать" href="/admin/orders/edit/<?php echo $order['id']?>" class="del">
                             <img src="../../template/images/edit.png" alt="">
                     </a></td>
 

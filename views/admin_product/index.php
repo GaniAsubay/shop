@@ -5,15 +5,15 @@ include (ROOT . '/views/parts/header_admin.php');
 <section>
 <div class="container_admin">
     <a href="/admin/product/add" class="add_item">
-        Добавить товар
+        Өнімді қосу
     </a>
-    <h4 id="admin_list_h4">Список товаров</h4>
+    <h4 id="admin_list_h4">Өнім тізімі</h4>
     <table id="admin_product_list"cellspacing="0">
         <tr>
-            <th>id товара</th>
-            <th>Код товара</th>
+            <th>Өнім идентификаторы</th>
+            <th>Өнім коды</th>
             <th>Название</th>
-            <th>Цена</th>
+            <th>Бағасы</th>
         </tr>
 
         <?php foreach ($products as $product):?>

@@ -9,6 +9,6 @@
 <body>
 <div id="wrapper">
 <header id="header_admin">
-    <a href="/admin" id="admin_main">Админпанель</a>
-    <a href="/" id="admin_to_main">На сайт</a>
+    <a href="/admin" id="admin_main">Әкімші панелі</a>
+    <a href="/" id="admin_to_main">Веб-сайтқа</a>
 </header>

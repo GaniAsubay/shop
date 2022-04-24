@@ -28,10 +28,10 @@ include(ROOT . '/views/parts/header.php');
                     <td>
                         <?php foreach ($products as $product): ?>
 
-                            <a target="_blank" href="/product/<?php echo $product['id'];?>"><?php echo $product['name'];?></a>
+                            <a href="/product/<?php echo $product['id'];?>"><?php echo $product['name'];?></a>
                             <?php
                             echo "<span>Кол-во: </span>" . $productQuantity[$product['id']];
-                            echo '<span>Цена: </span>' . $product['price']; echo ' грн';
+                            echo '<span>Цена: </span>' . $product['price']; echo ' тнг';
                             echo "</br>";
                             ?>
                             <?php
@@ -46,7 +46,7 @@ include(ROOT . '/views/parts/header.php');
                     <td><?php echo Order::getStatusText($order['status']); ?></td>
                 </tr>
                 <tr class="total_price">
-                    <td colspan="4"><?php echo '<span>Сумма заказа: ' . $totalValue; echo' грн</span>';?></td>
+                    <td colspan="4"><?php echo '<span>Сумма заказа: ' . $totalValue; echo' тнг</span>';?></td>
                 </tr>
                 <?php
                     //Очищаем массив

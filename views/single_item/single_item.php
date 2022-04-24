@@ -5,7 +5,7 @@ include (ROOT . '/views/parts/header.php');
     <div class="container">
         <!--left sidebar-->
         <div class="sidebar">
-            <h2>Категории</h2>
+            <h2>Санаттар</h2>
             <ul class="left_sidebar">
                 <?php foreach ($categories as $catItem): ?>
                     <li><a href="/category/<?php echo $catItem['id']?>">
@@ -28,21 +28,21 @@ include (ROOT . '/views/parts/header.php');
                     <div class="single_product_details">
                         <div class="single_product_details_main">
                             <h2><?php echo $product['name']?></h2>
-                            <p class="code">Код товара: <?php echo $product['code']?></p>
-                            <p class="item_price"><?php echo $product['price']?>&nbsp;грн</p>
+                            <p class="code">Өнім коды: <?php echo $product['code']?></p>
+                            <p class="item_price"><?php echo $product['price']?>&nbsp;тнг</p>
                             <div id="input_div">
                                 <a href="#" class="to_cart" data-id="<?php echo $product['id'];?>">
-                                    В корзину
+                                    Жәшікке
                                 </a>
                             </div>
-                            <p><b>Наличие:</b> На складе</p>
-                            <p><b>Состояние:</b> Новое</p>
-                            <p><b>Производитель: </b><?php echo $product['brand']?></p>
+                            <p><b>Қол жетімділік:</b> Қоймада</p>
+                            <p><b>Жағдайы:</b> Жаңа</p>
+                            <p><b>Өндіруші: </b><?php echo $product['brand']?></p>
                         </div>
                     </div>
                 </div>
                 <div class="product_description">
-                    <h3>Описание товара</h3>
+                    <h3>Тауардың сипаттамасы</h3>
                     <p>
                         <?php echo $product['description']?>
                     </p>

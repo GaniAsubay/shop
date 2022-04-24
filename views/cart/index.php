@@ -5,7 +5,7 @@ include (ROOT . '/views/parts/header.php');
     <div class="container">
         <!--left sidebar-->
         <div class="sidebar">
-            <h2>Категории</h2>
+            <h2>Санаттар</h2>
             <ul class="left_sidebar">
                 <?php foreach ($categories as $catItem): ?>
                     <li><a href="/category/<?php echo $catItem['id']?>">
@@ -17,22 +17,22 @@ include (ROOT . '/views/parts/header.php');
         <!--main content-->
         <div class="content">
             <?php if($productsInCart):?>
-                <h2>Корзина</h2>
-                <p>Вы выбрали такие товары:</p>
+                <h2>Жәшік</h2>
+                <p>Сіз келесі өнімдерді таңдадыңыз:</p>
 
                 <table id="cart_products"cellspacing="0">
                     <tr>
-                        <th>Код товара</th>
-                        <th>Название</th>
-                        <th>Стоимость, грн</th>
-                        <th>Количество, шт.</th>
-                        <th>Удалить</th>
+                        <th>Өнім коды</th>
+                        <th>Аты</th>
+                        <th>Құны, тнг</th>
+                        <th>Саны, шт.</th>
+                        <th>Жою</th>
                     </tr>
 
                     <?php foreach($products as $product):?>
                     <tr>
                         <td><?php echo $product['code'];?></td>
-                        <td><a target="_blank" href="/product/<?php echo $product['id'];?>" class="cart_item">
+                        <td><a href="/product/<?php echo $product['id'];?>" class="cart_item">
                                 <?php echo $product['name'];?>
                         </a></td>
                         <td><?php echo $product['price']?></td>
@@ -43,7 +43,7 @@ include (ROOT . '/views/parts/header.php');
                     </tr>
                     <?php endforeach;?>
                     <tr id="total_sum">
-                        <td>Общая стоимость, грн: </td>
+                        <td>Жалпы құны, тнг: </td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -52,12 +52,12 @@ include (ROOT . '/views/parts/header.php');
                 </table>
 
                 <a href="/cart/checkout" class="checkout">
-                    Оформить заказ
+                    Тапсырысты рәсімдеу
                 </a>
 
                 <?php else:?>
-                    <h2 id="empty_cart">Ваша корзина пуста</h2>
-                    <a href="/" id="empty_cart_to_main">Продолжить покупки</a>
+                    <h2 id="empty_cart">Сіздің жәшігіңіз бос</h2>
+                    <a href="/" id="empty_cart_to_main">Сатып алуды жалғастыру</a>
             <?php endif;?>
         </div>
     </div>

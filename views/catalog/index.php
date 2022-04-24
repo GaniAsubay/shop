@@ -5,7 +5,7 @@ include (ROOT . '/views/parts/header.php');
     <div class="container">
         <!--left sidebar-->
         <div class="sidebar">
-            <h2>Категории</h2>
+            <h2>Санаттар</h2>
             <ul class="left_sidebar">
                 <?php foreach ($categories as $catItem): ?>
                     <li><a href="/category/<?php echo $catItem['id']?>">
@@ -25,11 +25,11 @@ include (ROOT . '/views/parts/header.php');
                     if($latestProduct['is_new'])
                         echo "<img alt='' src='../../template/images/new.png' class='new'/>";
                     ?>
-                    <a target="_blank" href="/product/<?php echo $latestProduct['id']?>">
+                    <a href="/product/<?php echo $latestProduct['id']?>">
                         <img alt="" width="268px" height="249px" src="<?php echo Product::getImage($latestProduct['id']); ?>" />
                     </a>
-                    <p class="item_price"><?php echo $latestProduct['price']?>&nbspгрн</p>
-                    <a target="_blank" href="/product/<?php echo $latestProduct['id']?>">
+                    <p class="item_price"><?php echo $latestProduct['price']?>&nbspтнг</p>
+                    <a href="/product/<?php echo $latestProduct['id']?>">
                     <p class="item_name"><?php echo $latestProduct['name']?></p>
                     </a>
                     <a href="#" class="to_cart" data-id="<?php echo $latestProduct['id'];?>">

@@ -1,6 +1,6 @@
 </div>
 <div id="footer">
-    <p id='copy'>&copy; Shop 2016<p>
+    <p id='copy'>&copy; Shop 2022<p>
 </div>
 
 <script type="text/javascript">
